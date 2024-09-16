@@ -33,8 +33,8 @@ export default function RegisterPage() {
           <img src="/logo.png" alt="Logo" />
         </div>
         <ul className="navButtons">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">Sobre</a></li>
+        <li><a href="/">Home</a></li>
+          <li><a href="/register">Registrar</a></li>
           <li><a href="/login">Login</a></li>
         </ul>
       </header>

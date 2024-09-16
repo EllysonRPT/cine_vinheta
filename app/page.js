@@ -16,9 +16,9 @@ export default function Home() {
         </div>
         <nav>
           <ul className={styles.navButtons}>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#login">Login</a></li>
-            <li><a href="#registro">Registro</a></li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/register">Registrar</a></li>
+          <li><a href="/login">Login</a></li>
           </ul>
         </nav>
       </header>
