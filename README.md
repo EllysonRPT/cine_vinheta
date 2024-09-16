@@ -171,9 +171,13 @@
 
 # 7. Diagramas de Desenvolvimento
 
-### **Diagrama de Casos de Uso**
+### **Diagrama de Casos de Uso do Cliente**
 
 <img src="https://www.plantuml.com/plantuml/dpng/ZP0_IWKn4CRxd6BOIekzW8KyN145iV21VSWRbu4aiyma5jv6hAqymbxC11UVqHIlMxu_t_msEqrMKWxUM9TOOFA4CQ4nsmUCbt3sY3Df4YldZNpFCyLMkihghC0D-O3QMdlqw8XZiVUekhvpwqyS5YdcNPob-Fod_aIQhQVNahWjCEkda6Cu87ptIjhyueJn20WNC3oWgpVVX1WMAnR-NHjC2ryd-jHrxqVUqd1Dkd1SFrwGwbIlDlR_ifdRqWtaO7gjyQH7gUCJnsUIS9pROJpauBy0" width="600" alt="Diagrama de Fluxo">
+
+### **Diagrama de Casos de Uso do ADM**
+
+<img src="https://www.plantuml.com/plantuml/dpng/RP4zJiD048NxFSN8TLAGfA90iOoWeacKzAFTIJJI_aWxQmeGXw7Y08WJ-6AC3IOEihJLplVUlAVPIi5Ssk0Dsf8oLBKB75bAHfTo1IWm_1YJoHQCPqzGxNLE0S4HF5AcQ1a3nP8gU3K0-beXYwBaECwm9v7kYwGNFR0F98FveRcPvm_ITk-PquYjfjYHfKNFByhjo6FfFYVaUjwmIV74vpPZzw4vHdXZp9inGqLOBk_wF70BJMPSG5r-bYpWdZmL_EjmnQ-KhnrRJb797ONqJ1VjfSULQDsBhDhXj00uWYD5fybeVjb6TK_9yOaj_cy4Bi7lPOpPgar_rMy0" width="600" alt="Diagrama de Fluxo">
 
 
 ---
@@ -182,24 +186,27 @@
 
 ### **Imagem do Diagrama de Fluxo**
 
-<img src="https://www.plantuml.com/plantuml/dpng/XLHBZjD04DttAOe3p0L0GXE2-KZ3A9f1RAsEkv8foUuQgkmH0d4Q5eW5AyG9V37epxIJHWaRfxhU9-sgbrpgQ6MSXjuySRWZZt3JhD-lhbzVDT3rLjMOfN75U_BmnG0yZUKpy_KGNbjdTHHEZCTJ8HKFdiP4INL5U35fPnE-GVquaLg1LzGFg81mYwhpRzHAz85qiZrzjlFt-Hkt3jj7Od9gFj6M14hp9Uaz-_dd0r9jTOiz7hc44jkLAlenlrlWTCJU2cG686J6FqCH8N-NXIj7MVVMxmLLMS5o8LNQHZlkxsphk7qt_nZPnJjjxDuEorqI2GKo1Hn2eLI6bVG6uypa97_DVaSonAaMJOTRb0fo-BSnt8kj3DwGZlCleIwhovxa42hgUXVNFDAEkl0bQPNB1MfCUIi8pKDuYn2KZV302Okc9PmN5yzJa4ryXdFAd8dFS3uJ9tCQYihpwJ7duU1Gic1oaRh_YO8vZoUFXNtKFrwbEJmbVDcKMSg0L3jO1ff_vIPz78py4hqBVpP_0000" width="600" alt="Diagrama de Fluxo">
+<img src="https://www.plantuml.com/plantuml/dpng/ZP51YXin44NtEiLVUXQvm7YHWI61GCWYmnoWfbMs2oILKAdDaDiOBxBACYVeYsMgspWT364s3UhwzVJ_ruDrQdtCANJfYV4vZQ-Ao7WsnGSyQgwD_Fobx1kRgOKmhuHm_spZT6gYe87D20eJwvnf6sI7pNNCrgSJakufwiSxz0CNR9uatmNW_jEhl308TJhjfH2ao22Kje6JCJRVfhFEkkySfV4WMWYL6grM8ZjSojPrrrkb6BVB10pZSg1PyRIOn96IH08PXiQHoo0avWet_tLUEqwd9BUcrzSiiJ1eXetUWphYN_FNc9cBqPwpM-RMPYbWNQllb2Yxi7nNvRwCDX2gDemPEqcPj-62IsBTuo-_3L6iQfb-7Tc3h1Z6QQdkbX6vKphuiYwJkIkpwVTxWRJeptfbaa7hz7D1-D6uTFqFZctGT5WfFLAX93_8cwsDtjYFMdRIChs1p-hSIdlAhdVMRS6Nvt00r5P1_pB3NFq3bpZcz0S0" width="600" alt="Diagrama de Fluxo">
+
+### **FLuxo do ADM**
+
+<img src="https://www.plantuml.com/plantuml/dpng/hPHDZjD048NtFiLR9bBW09C5mmBO81P47A1mbPD2_MDrjQE8sqIpu0ISm1T3xHvPECwm03PHrAxtgkfxRJzQffG7xvgisGdUk-4ImO8l5l4A7oH9Q9MyX3mT7yHi_2c6pLls6jHo8evfspIJKTCyBCv1hPWH8amjYwTzezsD5c9vlCB58t5yiqK-IS3ce7xR00_lBlfLGEZ7wr43GOEsIWuSGSLbtuWpmURJ-1GdmMTXJT9g38IU4lscPIbTYWQucLE3INf-3859ED5KTgXpuqnEcK26DWbFKDHAHTdduoGxZrUdwnLMlUgcQAE73OLFB3xBDURDlGIZetYmG5AQIW7BiI-QmDerzVT5yZrf45VqnziqxJdDVNCd5XQJRmHYdM0c39uGufcgxEcbhBgO_E36Qz9O0vWT5kex8VH99BGd0HD70y-rs7JglEp0b6c7KqoJ_GwIszVRHKv6xaoWTQiwN1j3fydJ-AFOiim9BAvH9Ve79daWfzyhatb8kPGPGfOLcAM9YPC9oAmi_nA4DHFJ_ZxADleLbpN3UJIGGKCNwwvJncjA1d9Pqbpndp6nECbBI7-9fZenBPReXMydxIdDRTTmvc8GvDAweNHOM5Of_ldctFJjDDHGR233ZBkPNkD72Lm-mBy0" width="600" alt="Diagrama de Fluxo">
 
 
 ### **Diagrama de Classes**
 
+
+### Diagrama de Classes:
 - **Sessão**:
-  - Atributos: ID, Filme, Data, Horário, Preço.
-  - Métodos: `criarSessao()`, `atualizarSessao()`, `deletarSessao()`, `obterSessao()`
-
+  - **Atributos**: ID, Filme, Data, Horário, Preço.
+  - **Métodos**: criarSessao(), atualizarSessao(), deletarSessao().
 - **Cliente**:
-  - Atributos: ID, Nome, Email, Senha.
-  - Métodos: `registrar()`, `login()`, `atualizarPerfil()`, `visualizarHistorico()`
-
+  - **Atributos**: ID, Nome, Email, Senha.
+  - **Métodos**: registrar(), login(), atualizarPerfil(), comprarIngresso().
 - **Reserva**:
-  - Atributos: ID_cliente, ID_sessão, Quantidade, Status.
-  - Métodos: `criarReserva()`, `cancelarReserva()`, `atualizarReserva()`, `obterReserva()`
+  - **Atributos**: ID_cliente, ID_sessão, Quantidade, Status.
+  - **Métodos**: criarReserva(), cancelarReserva(), obterReserva().
 
----
 
 
 
