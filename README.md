@@ -206,7 +206,20 @@
 - **Reserva**:
   - **Atributos**: ID_cliente, ID_sessão, Quantidade, Status.
   - **Métodos**: criarReserva(), cancelarReserva(), obterReserva().
+  
 
+### Prototipo
 
+#### Baixa Fidelidade
+<img src="img/figma_basico.png" width="600" alt="Diagrama de Fluxo">
+<br>
+<br>
 
+#### Média Fidelidade
+<img src="img/figma_medio.png" width="600" alt="Diagrama de Fluxo">
+<br>
+<br>
+
+#### Alta Fidelidade
+<img src="img/figma_alta.png" width="600" alt="Diagrama de Fluxo">
 
