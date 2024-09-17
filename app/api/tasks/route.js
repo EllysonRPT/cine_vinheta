@@ -14,12 +14,9 @@ const tasks = await Task.find();
 return NextResponse.json(tasks);
 
 } catch (error) {
- 
     console.error("erro ao buscar tarefa", error);
     return NextResponse.json({success:false, message:"erro ao buscar tarefa" },{status:500});
-}
-    
-    
+}   
 }
 
 // Método POST - nova tarefa
