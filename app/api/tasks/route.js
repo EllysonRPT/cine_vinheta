@@ -21,9 +21,24 @@ return NextResponse.json(tasks);
 
 // Método POST - nova tarefa
 export async function POST(req, res) {
-    return jwtMiddleware(async (req, res) => {
-        await addTask(req, res).json({ message: 'Erro ao atualizar Post' });;
-    })(req, res);
+try {
+   await connectMongo();
+   const {title }= await request.json();
+   const token= request.headers.get('authorization')?.split(' ')[1];
+
+   if (!token) {
+    return NextResponse.json({success:false,message:" nao encontrado a token"},{status:401});
+    
+   }
+   const decode=jwt.verify(token, process.env.JWT_SECRET );
+   const userId = decode.userId;
+
+   const task = new Task({userId,title});
+   await task.save();
+   return NextResponse.json(task);
+} catch (error) {
+   console.error("erro ao adicionar eu acho",error) 
+}
 }
 
 // Método PUT - Atualiza uma tarefa existente
