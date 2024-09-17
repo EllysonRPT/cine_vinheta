@@ -3,6 +3,7 @@
   flex-direction: column;
   min-height: 100vh;
   background-color: #000000; /* Define o fundo preto */
+  font-family: Arial, sans-serif; /* Adiciona uma fonte padrão ao corpo */
 }
 
 .header {
@@ -15,16 +16,7 @@
   left: 0;
   z-index: 1000;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logoSpace {
-  margin-left: 20px;
-}
-
-.logoSpace img {
-  height: 60px; /* Ajuste o tamanho da logo conforme necessário */
+  justify-content: center; /* Centraliza horizontalmente */
 }
 
 .navButtons {
@@ -79,4 +71,12 @@
   width: 100%;
   bottom: 0;
   left: 0;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: flex-end; /* Alinha a imagem à direita */
+  align-items: center;
+  height: 100%;
+  padding: 0 20px; /* Ajuste o padding se necessário */
 }

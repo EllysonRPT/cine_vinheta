@@ -5,20 +5,11 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        <div className={styles.logoSpace}>
-          <Image
-            src="/path-to-your-logo.png" // Substitua com o caminho da sua logo
-            alt="Logo"
-            height={60}
-            width={150}
-            priority
-          />
-        </div>
         <nav>
           <ul className={styles.navButtons}>
-          <li><a href="/">Home</a></li>
-          <li><a href="/register">Registrar</a></li>
-          <li><a href="/login">Login</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/register">Registrar</a></li>
+            <li><a href="/login">Login</a></li>
           </ul>
         </nav>
       </header>
@@ -39,12 +30,6 @@ export default function Home() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
             Deploy now
           </a>
           <a
@@ -56,6 +41,15 @@ export default function Home() {
             Read our docs
           </a>
         </div>
+
+        <div className={styles.imageContainer}>
+          <Image
+            src="/furiosa.png" 
+            alt="Imagem personalizada"
+            width={300} 
+            height={300}
+          />
+        </div>
       </main>
 
       <footer className={styles.footer}>
@@ -64,13 +58,6 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
           Learn
         </a>
         <a
@@ -78,13 +65,6 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
           Examples
         </a>
         <a
@@ -92,13 +72,6 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
           Go to nextjs.org →
         </a>
       </footer>
