@@ -52,23 +52,7 @@ export const updateTask = async (req, res) => {
 };
 
 // Deletar Tarefa
-export const deleteTask = async (req, res) => {
-    const { id } = req.query;
-    await connectMongo();
-
-    try {
-        const deletedTask = await Task.findOneAndDelete({
-            _id: id, userId: req.user.userId
-        });
-        if (!deletedTask) return res.status(404).json({
-            message: 'Tarefa não encontrada'
-        });
-        res.status(200).json({
-            message: 'Tarefa deletada com sucesso'
-        });
-    } catch (error) {
-        res.status(500).json({
-            message: 'Erro ao deletar tarefa'
-        });
-    }
+export const deleteTask = async (id) => {
+   await connectMongo();
+   return await Task.deleteOne({_id:id});
 };
