@@ -1,11 +1,25 @@
 import { jwtMiddleware } from "@/utils/middleware";
 import { getTasks, addTask, updateTask, deleteTask } from "@/controllers/TaskController";
+import { connect } from "mongoose";
+import connectMongo from "@/utils/dbConnect";
+import Task from "@/models/Task";
+import { NextResponse } from "next/server";
 
 // método GET - listar as tarefas do Usuário
 export async function GET(req, res) {
-    return jwtMiddleware(async (req, res) => {
-        await getTasks(req, res).json({ message: 'Erro ao get' });
-    })(req, res);
+try {
+    await connectMongo();
+
+const tasks = await Task.find();
+return NextResponse.json(tasks);
+
+} catch (error) {
+ 
+    console.error("erro ao buscar tarefa", error);
+    return NextResponse.json({success:false, message:"erro ao buscar tarefa" },{status:500});
+}
+    
+    
 }
 
 // Método POST - nova tarefa

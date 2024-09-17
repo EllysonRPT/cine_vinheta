@@ -2,17 +2,18 @@ import User from "@/models/User";
 import connectMongo from "@/utils/dbConnect";
 import { NextResponse } from "next/server";
 import jwt from "jsonwebtoken";
+import bcrypt from 'bcrypt';
 
 
 export async function POST(request) {
     const {username, password} = await request.json();
+    console.log("dados recebidos", {username, password});
     await connectMongo();
     //verificar se o user existe
     try {
         const user = await User.findOne({username});
-        if (!user && !(await user.comparePassword(password))) {
-            return NextResponse.json({success:false},{status:400});
-        }
+       const isPasswordValue = await bcrypt.compare(password, user.password);
+       console.log("senha valida", isPasswordValue);
 
 
         //CRIAR MINHA TOKEN DE AUTORIZAÇÃO
