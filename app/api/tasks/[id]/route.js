@@ -11,7 +11,7 @@ export async function PUT(req, { params }) {
         return NextResponse.json({ success: true, data: task });
     } catch (error) {
         console.error('PUT request error:', error);
-        return NextResponse.json({ success: false, message: 'Failed to update Task' }, { status: 500 });
+        return NextResponse.json({ success: false, message: 'Erro ao atualizar put' }, { status: 500 });
     }
 }
 
@@ -21,6 +21,6 @@ export async function DELETE(req, { params }) {
         return NextResponse.json({ success: true, data: {} });
     } catch (error) {
         console.error('DELETE request error:', error);
-        return NextResponse.json({ success: false, message: 'Failed to delete Task' }, { status: 500 });
+        return NextResponse.json({ success: false, message: 'erro ao deletar' }, { status: 500 });
     }
 }

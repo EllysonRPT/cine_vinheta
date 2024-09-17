@@ -10,7 +10,7 @@ export const getTasks = async (req, res) => {
         const tasks = await Task.find({ userId: req.user.userId });
         res.status(200).json({ tasks });
     } catch (error) {
-        res.status(500).json({ error });
+        res.status(500).json({ message: 'Erro ao getTasks' });
     }
 }
 
