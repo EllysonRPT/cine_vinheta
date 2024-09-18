@@ -1,121 +1,143 @@
 /* tasksPage.module.css */
 
 .page {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #000000; /* Define o fundo preto */
-    font-family: Arial, sans-serif; /* Adiciona uma fonte padrão ao corpo */
-  }
-  
-  .header {
-    background-color: #003366;
-    color: #FFD700;
-    padding: 26px 0; /* Ajusta o padding para aumentar a altura do header */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente o conteúdo do header */
-    align-items: center; /* Alinha verticalmente o conteúdo do header */
-  }
-  
-  .logo {
-    position: absolute;
-    top: 0px; /* Ajusta a posição da logo com base no novo padding do header */
-    left: 0px; /* Ajusta a posição da logo da esquerda */
-    height: 80px; /* Ajuste a altura da logo conforme necessário */
-  }
-  
-  .logo img {
-    height: 50px; /* Ajuste a altura da logo conforme necessário */
-    width: auto; /* Mantém a proporção da logo */
-  }
-  
-  .navButtons {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente os botões de navegação */
-    flex: 1;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%); /* Centraliza o contêiner horizontalmente */
-  }
-  
-  .navButtons li {
-    margin: 0 15px;
-  }
-  
-  .navButtons a {
-    color: #FFD700;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .navButtons a:hover {
-    text-decoration: underline;
-  }
-  
-  .main {
-    padding: 110px 20px 60px; /* Ajusta o padding para compensar o header fixo */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza horizontalmente os itens */
-    justify-content: center; /* Centraliza verticalmente os itens */
-    text-align: center;
-    color: #FFD700;
-  }
-  
-  .input {
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    background-color: #333; /* Cor de fundo para inputs */
-    color: #FFD700; /* Cor do texto para inputs */
-  }
-  
-  .button {
-    width: 300px;
-    padding: 10px;
-    background-color: #0070f3;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #005bb5; /* Cor de fundo do botão ao passar o mouse */
-  }
-  
-  .text {
-    margin-top: 20px;
-  }
-  
-  .link {
-    color: #FFD700;
-    text-decoration: none;
-  }
-  
-  .error {
-    color: red;
-    margin-bottom: 10px;
-  }
-  
-  .footer {
-    background-color: #003366;
-    color: #FFD700;
-    padding: 42px 0; /* Aumenta o padding para aumentar a altura do footer */
-    text-align: center;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #000000; /* Define o fundo preto */
+  font-family: Arial, sans-serif; /* Adiciona uma fonte padrão ao corpo */
+}
+
+.header {
+  background-color: #003366;
+  color: #FFD700;
+  padding: 26px 0; /* Ajusta o padding para aumentar a altura do header */
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente o conteúdo do header */
+  align-items: center; /* Alinha verticalmente o conteúdo do header */
+}
+
+.logo {
+  position: absolute;
+  top: 0px; /* Ajusta a posição da logo com base no novo padding do header */
+  left: 0px; /* Ajusta a posição da logo da esquerda */
+  height: 80px; /* Ajuste a altura da logo conforme necessário */
+}
+
+.logo img {
+  height: 50px; /* Ajuste a altura da logo conforme necessário */
+  width: auto; /* Mantém a proporção da logo */
+}
+
+.navButtons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente os botões de navegação */
+  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza o contêiner horizontalmente */
+}
+
+.navButtons li {
+  margin: 0 15px;
+}
+
+.navButtons a {
+  color: #FFD700;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.navButtons a:hover {
+  text-decoration: underline;
+}
+
+.main {
+  padding: 110px 20px 60px; /* Ajusta o padding para compensar o header fixo */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza horizontalmente os itens */
+  justify-content: center; /* Centraliza verticalmente os itens */
+  text-align: center;
+  color: #FFD700;
+}
+
+.input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #333; /* Cor de fundo para inputs */
+  color: #FFD700; /* Cor do texto para inputs */
+}
+
+.button {
+  width: 300px;
+  padding: 10px;
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #005bb5; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.text {
+  margin-top: 20px;
+}
+
+.link {
+  color: #FFD700;
+  text-decoration: none;
+}
+
+.error {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.footer {
+  background-color: #003366;
+  color: #FFD700;
+  padding: 42px 0; /* Aumenta o padding para aumentar a altura do footer */
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.smallButton {
+  font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+  padding: 0.25rem 0.5rem; /* Ajusta o padding */
+  margin: 0 0.25rem; /* Adiciona margem para espaçamento */
+  /* Outros estilos para deixar o botão menor */
+}
+
+.taskItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem; /* Adiciona um pouco de espaço abaixo de cada item */
+}
+
+.taskTitle {
+  margin-right: 1rem; /* Ajusta o espaço entre o título da tarefa e os botões */
+  flex: 1; /* Faz com que o título ocupe o espaço disponível */
+}
+
+
+.addTaskButton {
+  margin-bottom: 1rem; /* Ajusta o espaço abaixo do botão "Adicionar Tarefa" */
+}

@@ -126,20 +126,21 @@ export default function TasksPage() {
       </header>
 
       <main className={styles.main}>
-        <h1>Tasks</h1>
+        <h1>SESSÕES</h1>
         <input
           type="text"
-          placeholder="Nova tarefa"
+          placeholder="Inserir Sessão"
           value={newTask}
           onChange={(e) => setNewTask(e.target.value)}
           className={styles.input}
         />
-        <button onClick={addTask} className={styles.button}>
-          Adicionar Tarefa
+        <button onClick={addTask} className={`${styles.button} ${styles.addTaskButton}`}>
+          Adicionar Sessão
         </button>
         <ul>
           {tasks.map((task) => (
-            <li key={task._id}>
+            <li key={task._id} className={styles.taskItem}>
+              <span className={styles.taskTitle}>{task.title}</span>
               {editTaskId === task._id ? (
                 <>
                   <input
@@ -154,11 +155,10 @@ export default function TasksPage() {
                 </>
               ) : (
                 <>
-                  {task.title}
-                  <button onClick={() => deleteTask(task._id)} className={styles.button}>
+                  <button onClick={() => deleteTask(task._id)} className={styles.smallButton}>
                     Excluir
                   </button>
-                  <button onClick={() => startEditTask(task)} className={styles.button}>
+                  <button onClick={() => startEditTask(task)} className={styles.smallButton}>
                     Editar
                   </button>
                 </>
