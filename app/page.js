@@ -1,9 +1,42 @@
 // pages/index.js (ou app/page.js)
+'use client'
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 import Image from 'next/image';
 import styles from './page.module.css'; // Certifique-se de que este caminho está correto
 
 export default function Home() {
+  const [tasks, setTasks] = useState([]);
+  const [newTask, setNewTask] = useState('');
+  const [editTaskId, setEditTaskId] = useState(null);
+  const [editTitle, setEditTitle] = useState('');
+  const router = useRouter();
+
+  useEffect(() => {
+    const fetchTasks = async () => {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        router.push('/login');
+        return;
+      }
+
+      const response = await fetch('/api/tasks', {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setTasks(data); // Certifique-se de que a API retorna o array correto
+      } else {
+        router.push('/login');
+      }
+    };
+
+    fetchTasks();
+  }, [router]);
   return (
     <div className={styles.page}>
       <header className={styles.header}>
@@ -34,19 +67,35 @@ export default function Home() {
         </ol>
 
         <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Garanta sua Sessão
-          </a>
-          <a
-           
-          >
+       
+            Sessões Aberta
             
-          </a>
+         
+
+        <ul>
+          {tasks.map((task) => (
+            <li key={task._id}>
+              {editTaskId === task._id ? (
+                <>
+                  <input
+                    type="text"
+                    value={editTitle}
+                    onChange={(e) => setEditTitle(e.target.value)}
+                    className={styles.input}
+                  />
+                  <button onClick={updateTask} className={styles.button}>
+                    Salvar
+                  </button>
+                </>
+              ) : (
+                <>
+                  {task.title}
+                  
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
         </div>
 
         <div className={styles.imageContainer}>

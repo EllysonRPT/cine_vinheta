@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import styles from './tasksPage.module.css'; // Importa o arquivo CSS
 
 export default function TasksPage() {
   const [tasks, setTasks] = useState([]);
@@ -110,37 +111,66 @@ export default function TasksPage() {
   };
 
   return (
-    <div>
-      <h1>To-Do List</h1>
-      <input
-        type="text"
-        placeholder="Nova tarefa"
-        value={newTask}
-        onChange={(e) => setNewTask(e.target.value)}
-      />
-      <button onClick={addTask}>Adicionar Tarefa</button>
-      <ul>
-        {tasks.map((task) => (
-          <li key={task._id}>
-            {editTaskId === task._id ? (
-              <>
-                <input
-                  type="text"
-                  value={editTitle}
-                  onChange={(e) => setEditTitle(e.target.value)}
-                />
-                <button onClick={updateTask}>Salvar</button>
-              </>
-            ) : (
-              <>
-                {task.title}
-                <button onClick={() => deleteTask(task._id)}>Excluir</button>
-                <button onClick={() => startEditTask(task)}>Editar</button>
-              </>
-            )}
-          </li>
-        ))}
-      </ul>
+    <div className={styles.page}>
+      <header className={styles.header}>
+        <div className={styles.logo}>
+          <img src="/logo.png" alt="Logo" />
+        </div>
+        <nav>
+          <ul className={styles.navButtons}>
+            <li><a href="/">Home</a></li>
+            <li><a href="/register">Registrar</a></li>
+            <li><a href="/login">Login</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main className={styles.main}>
+        <h1>Tasks</h1>
+        <input
+          type="text"
+          placeholder="Nova tarefa"
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}
+          className={styles.input}
+        />
+        <button onClick={addTask} className={styles.button}>
+          Adicionar Tarefa
+        </button>
+        <ul>
+          {tasks.map((task) => (
+            <li key={task._id}>
+              {editTaskId === task._id ? (
+                <>
+                  <input
+                    type="text"
+                    value={editTitle}
+                    onChange={(e) => setEditTitle(e.target.value)}
+                    className={styles.input}
+                  />
+                  <button onClick={updateTask} className={styles.button}>
+                    Salvar
+                  </button>
+                </>
+              ) : (
+                <>
+                  {task.title}
+                  <button onClick={() => deleteTask(task._id)} className={styles.button}>
+                    Excluir
+                  </button>
+                  <button onClick={() => startEditTask(task)} className={styles.button}>
+                    Editar
+                  </button>
+                </>
+              )}
+            </li>
+          ))}
+        </ul>
+      </main>
+
+      <footer className={styles.footer}>
+        <p>Todos os direitos reservados</p>
+      </footer>
     </div>
   );
 }
