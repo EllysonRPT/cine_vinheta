@@ -1,10 +1,8 @@
-// pages/index.js (ou app/page.js)
 'use client'
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-
 import Image from 'next/image';
-import styles from './page.module.css'; // Certifique-se de que este caminho está correto
+import styles from './page.module.css'; // Verifique se o caminho está correto
 
 export default function Home() {
   const [tasks, setTasks] = useState([]);
@@ -29,7 +27,7 @@ export default function Home() {
 
       if (response.ok) {
         const data = await response.json();
-        setTasks(data); // Certifique-se de que a API retorna o array correto
+        setTasks(data); // Verifique se a API retorna o array correto
       } else {
         router.push('/login');
       }
@@ -37,18 +35,21 @@ export default function Home() {
 
     fetchTasks();
   }, [router]);
+
+  const updateTask = async () => {
+    // Função para atualizar a tarefa
+  };
+
   return (
     <div className={styles.page}>
       <header className={styles.header}>
-        {/* Logo no canto superior esquerdo */}
         <Image
           src="/logo.png" // Caminho relativo à pasta public
           alt="Logo"
           className={styles.logo}
-          width={90} // Ajuste o tamanho conforme necessário
-          height={30} // Ajuste o tamanho conforme necessário
+          width={90}
+          height={30}
         />
-
         <nav>
           <ul className={styles.navButtons}>
             <li><a href="/">Home</a></li>
@@ -59,60 +60,50 @@ export default function Home() {
       </header>
 
       <main className={styles.main}>
-        <h1>SESSÕES EM ABERTO</h1>
-        <ol>
-          <li>
-            Bem-vindo à Página Inicial
-          </li>
-        </ol>
+        <h1>Sessões em Aberto</h1>
 
-        <div className={styles.ctas}>
-       
-            Sessões Aberta
-            
-         
+        <div className={styles.contentContainer}>
+          <div className={styles.taskListContainer}>
+            <ul className={styles.taskList}>
+              {tasks.map((task) => (
+                <li key={task._id} className={styles.taskItem}>
+                  {editTaskId === task._id ? (
+                    <>
+                      <input
+                        type="text"
+                        value={editTitle}
+                        onChange={(e) => setEditTitle(e.target.value)}
+                        className={styles.input}
+                      />
+                      <button onClick={updateTask} className={styles.button}>
+                        Salvar
+                      </button>
+                    </>
+                  ) : (
+                    <>
+                      {task.title}
+                      {/* Adicione botões para editar ou excluir tarefas aqui */}
+                    </>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <ul>
-          {tasks.map((task) => (
-            <li key={task._id}>
-              {editTaskId === task._id ? (
-                <>
-                  <input
-                    type="text"
-                    value={editTitle}
-                    onChange={(e) => setEditTitle(e.target.value)}
-                    className={styles.input}
-                  />
-                  <button onClick={updateTask} className={styles.button}>
-                    Salvar
-                  </button>
-                </>
-              ) : (
-                <>
-                  {task.title}
-                  
-                </>
-              )}
-            </li>
-          ))}
-        </ul>
-        </div>
-
-        <div className={styles.imageContainer}>
-          <Image
-            src="/furiosa.png"
-            alt="Imagem personalizada"
-            width={300}
-            height={300}
-          />
+          <div className={styles.imageContainer}>
+            <Image
+              src="/furiosa.png"
+              alt="Imagem personalizada"
+              width={300}
+              height={300}
+            />
+          </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <p>
-
-        </p>
+        <p>&copy; 2024 CineVinheta. Todos os direitos reservados.</p>
       </footer>
     </div>
   );
-} 
+}

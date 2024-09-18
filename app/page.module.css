@@ -1,32 +1,30 @@
-/* styles/page.module.css */
-
 .page {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #000000; /* Define o fundo preto */
-  font-family: Arial, sans-serif; /* Adiciona uma fonte padrão ao corpo */
+  background-color: #000000; /* Fundo preto */
+  font-family: Arial, sans-serif; /* Fonte padrão */
 }
 
 .header {
   background-color: #003366;
   color: #FFD700;
-  padding: 26px 0; /* Aumenta o padding para aumentar a altura do header em aproximadamente 30% */
+  padding: 26px 0;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 1000;
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Alinha verticalmente o conteúdo do header */
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
   position: absolute;
-  top: 0px; /* Ajusta a posição da logo com base no novo padding do header */
-  left: 0px; /* Ajusta a posição da logo da esquerda */
-  height: 80px; /* Ajuste a altura da logo conforme necessário */
+  top: 0px;
+  left: 0px;
+  height: 80px;
 }
 
 .navButtons {
@@ -53,29 +51,65 @@
 }
 
 .main {
-  padding: 110px 20px 60px; /* Aumenta o padding-top para compensar a altura aumentada do header */
+  padding: 110px 20px 60px;
   text-align: center;
-  color: #FFD700; /* Define a cor do texto para combinar com o tema */
-}
-
-.ctas {
-  margin-top: 20px;
-}
-
-.primary {
   color: #FFD700;
-  text-decoration: none;
 }
 
-.secondary {
-  color: #FFD700;
-  text-decoration: none;
+.main h1 {
+  margin-bottom: 20px; /* Espaçamento entre o título e o conteúdo abaixo */
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: space-evenly; /* Distribui o espaço igualmente entre a lista e a imagem */
+  align-items: center; /* Alinha verticalmente a lista e a imagem */
+  width: 100%; /* Garante que o container flex ocupe toda a largura disponível */
+  margin-top: 20px; /* Adiciona espaço acima do container */
+}
+
+.taskListContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%; /* Limita a largura da lista de tarefas */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.taskList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.taskItem {
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  align-items: center; /* Alinha o conteúdo das tarefas verticalmente */
+}
+
+.input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.button {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #FFC107;
 }
 
 .footer {
   background-color: #003366;
   color: #FFD700;
-  padding: 42px 0; /* Aumenta o padding para aumentar a altura do footer em aproximadamente 30% */
+  padding: 42px 0;
   text-align: center;
   position: fixed;
   width: 100%;
@@ -85,9 +119,8 @@
 
 .imageContainer {
   display: flex;
-  justify-content: flex-end; /* Alinha a imagem à direita */
-  align-items: center;
-  height: 100%;
-  padding: 0 90px; /* Ajuste o padding se necessário */
-  margin-top: 130px; /* Ajusta o espaço acima da imagem */
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  align-items: center; /* Alinha a imagem verticalmente */
+  height: 300px; /* Define a altura da imagem */
+  width: 300px; /* Define a largura da imagem */
 }
